@@ -2,9 +2,7 @@ const Footer = () => {
     return (
         <div className="container">
             <div className="footer">
-                <p>
-                    &copy; 2015 davidbtrudmancpa.com
-                </p>
+                &copy; 2013 davidbtrudmancpa.com
             </div>
 
             <style jsx>{`
