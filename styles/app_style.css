@@ -1,11 +1,15 @@
 .main-container {
     flex: 1;
     width: 100%;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     max-width: 1168px;
     background-color: rgba(233, 238, 238, 0.5);
-    background: linear-gradient(150deg, rgba(233, 238, 238, 1), rgba(233, 238, 238, 0.1));
+    background: linear-gradient(
+        150deg,
+        rgba(233, 238, 238, 1),
+        rgba(233, 238, 238, 0.1)
+    );
     padding: 1rem;
 }
 
@@ -14,30 +18,10 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 1168px;
-    background-color: #ffffff;
-}
-
-blockquote {
-    text-align: center;
-    padding: 1rem 1.25rem;
-    margin: 1.5rem 0;
-    border-left: 8px solid coral;
-    background-color: beige;
-    font-size: 1.25rem;
-}
-
-.blockquote-footer {
-    display: block;
-    font-size: 80%;
-    color: #6c757d;
-}
-
-.blockquote-footer::before {
-    content: '\2014\00A0';
 }
 
 a {
-    color: #024dbc;
+    color: #008000;
     text-decoration: none;
 }
 
@@ -51,7 +35,7 @@ a:hover {
     padding-top: 0.25rem;
     display: inline-block;
     transition: 0.3s;
-    color: #024dbc !important;
+    color: #008000 !important;
 }
 
 .link::after {
@@ -60,9 +44,9 @@ a:hover {
     left: 50%;
     width: 1px;
     height: 1px;
-    content: '';
+    content: "";
     background-color: transparent;
-    transition: width 0.30s, left 0.30s, background-color 1s;
+    transition: width 0.3s, left 0.3s, background-color 1s;
 }
 
 .link:hover {
@@ -75,5 +59,23 @@ a:hover {
     width: 100%;
     left: 0;
     background-color: coral;
-    transition: width 0.30s, left 0.30s, background-color 1s;
+    transition: width 0.3s, left 0.3s, background-color 1s;
+}
+
+h2 {
+    border-bottom: 1px rgba(0, 0, 0, 0.75) solid;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.main-text {
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .main-container,
+    .container {
+        width: calc(100% - 2rem);
+    }
 }

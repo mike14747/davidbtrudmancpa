@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 
 import Header from '../components/header';
+import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 import '../styles/my_reset.css';
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
                 <title>David B Trudman CPA</title>
             </Head>
             <Header />
+            <Navbar />
             <main className="main-container"><Component {...pageProps} /></main>
             <Footer />
 
