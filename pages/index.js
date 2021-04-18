@@ -1,6 +1,10 @@
+import PropTypes from 'prop-types';
+import BlockContent from '@sanity/block-content-to-react';
+import noContainer from '../utils/noContainer';
+
 // import styles from '../styles/home.module.css';
 
-const Home = () => {
+const Home = ({ blockContent }) => {
     return (
         <article>
             <section>
@@ -8,25 +12,35 @@ const Home = () => {
             </section>
 
             <section className="main-text">
-                <p>
-                    Today it doesn’t matter if your CPA is across the country or across the street.
-                </p>
-
-                <p>
-                    With thirty-five years’ experience specializing in tax preparation, tax planning, tax research, accounting, bookkeeping, and setting up computer accounting systems, I can suggest a plethora of strategies to minimize your taxes.
-                </p>
-
-                <p>
-                    Over the years I have built my business on personal service. The number one reason people and businesses choose me is that I do the research that helps them make good decisions and increase profits.
-                </p>
-
-                <p>
-                    Your relationship with your CPA is one of your biggest assets. I am a professional CPA and a trusted adviser to my clients. I make it easy to work seamlessly with my clients wherever they are located. I go above and beyond to meet their special needs. Plus you may have the confidence that I stand 100% behind my work.
-                </p>
+                {blockContent && blockContent.pageText
+                    ? <BlockContent
+                        blocks={blockContent.pageText}
+                        serializers={noContainer}
+                    />
+                    : <>An error occurred fetching the summary data.</>
+                }
             </section>
-
         </article>
     );
 };
+
+Home.propTypes = {
+    blockContent: PropTypes.object,
+};
+
+export async function getStaticProps(context) {
+    const baseQueryUrl = 'https://7xgplcbh.api.sanity.io/v1/data/query/production?query=';
+
+    const query = encodeURIComponent('*[_type == "webpageText" && name == "Homepage"][0]{pageText}');
+    const url = `${baseQueryUrl}${query}`;
+    const blockContentJSON = await fetch(url).then(res => res.json().catch(error => console.log(error)));
+
+    return {
+        props: {
+            blockContent: (blockContentJSON && blockContentJSON.result) || [],
+        },
+        revalidate: 600, // page regeneration can occur in 10 minutes
+    };
+}
 
 export default Home;
