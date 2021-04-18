@@ -26,6 +26,12 @@ const Navbar = () => {
                             Reviews
                         </div>
                     }
+                    {router.pathname === '/contact'
+                        ? <div className={styles.navItemCurrent}>Contact</div>
+                        : <div className={styles.navItem} onClick={() => router.push('/contact')}>
+                            Contact
+                        </div>
+                    }
                 </div>
             </div>
         </nav>

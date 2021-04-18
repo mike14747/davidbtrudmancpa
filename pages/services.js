@@ -1,8 +1,10 @@
 const Services = () => {
     return (
-        <>
-            This is the services page!
-        </>
+        <article>
+            <section>
+                <h2>Services</h2>
+            </section>
+        </article>
     );
 };
 

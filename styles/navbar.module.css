@@ -21,7 +21,7 @@
     white-space: nowrap;
     position: relative;
     color: #008000;
-    transition: width 0.30s, left 0.30s, background-color 1s;
+    transition: width 0.3s, left 0.3s, background-color 1s;
 }
 
 .navItem::after {
@@ -32,7 +32,7 @@
     height: 3px;
     content: '';
     background-color: transparent;
-    transition: width 0.30s, left 0.30s, background-color 1s;
+    transition: width 0.3s, left 0.3s, background-color 1s;
 }
 
 .navItem:hover {
@@ -45,7 +45,7 @@
     width: 100%;
     left: 0;
     background-color: coral;
-    transition: width 0.30s, left 0.30s, background-color 1s;
+    transition: width 0.3s, left 0.3s, background-color 1s;
 }
 
 .navItemCurrent {
@@ -64,5 +64,11 @@
     height: 3px;
     content: '';
     background-color: #cccccc;
-    transition: width 0.30s, left 0.30s, background-color 1s;
+    transition: width 0.3s, left 0.3s, background-color 1s;
+}
+
+@media (min-width: 576px) {
+    .navLeft {
+        font-size: 1.1rem;
+    }
 }
