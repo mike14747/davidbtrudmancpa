@@ -1,5 +1,5 @@
 .review {
-    margin: 2rem;
+    margin: 2rem 0.50rem;
     padding-bottom: 1rem;
     border-bottom: 1px rgba(0, 128, 0, 1) solid;
 }
@@ -10,16 +10,30 @@
 
 .reviewer {
     margin-bottom: 1rem;
-    font-size: 1.2rem;
-    letter-spacing: 0.05rem;
+    font-size: 1rem;
 }
 
 .reviewDate {
     font-style: italic;
-    font-size: 0.90rem;
-    margin-left: 0.50rem;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
 }
 
 .reviewText {
-    font-size: 1.1rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+    .review {
+        margin: 2rem;
+    }
+
+    .reviewer {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+
+    .reviewText {
+        font-size: 1.1rem;
+    }
 }

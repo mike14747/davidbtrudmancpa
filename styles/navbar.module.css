@@ -8,7 +8,7 @@
 .nav {
     display: flex;
     align-items: flex-end;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .navLeft {
@@ -68,6 +68,10 @@
 }
 
 @media (min-width: 576px) {
+    .nav {
+        justify-content: flex-start;
+    }
+
     .navLeft {
         font-size: 1.1rem;
     }

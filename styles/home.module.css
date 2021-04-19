@@ -1,0 +1,57 @@
+.widgets {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;;
+}
+
+.thumbtack {
+    text-align: center;
+    flex: 1;
+}
+
+.paypal {
+    text-align: center;
+    flex: 1;
+}
+
+.thumbtackImage {
+    width: 256px;
+    max-width: calc(100% - 1rem);
+    height: auto;
+    background-color: rgba(0, 128, 0, 0.10);
+    border-radius: 1rem;
+}
+
+.thumbtackLink:hover::after {
+    background-color: transparent;
+}
+
+.paymentText {
+    margin: 0.75rem 0;
+    font-size: 0.90rem;
+}
+
+.paypalLogo {
+    width: 150px;
+    max-width: calc(100% - 1rem);
+    height: auto;
+}
+
+.buyNow {
+    width: 171px;
+    max-width: calc(100% - 1rem);
+    height: auto;
+}
+
+@media (min-width: 576px) {
+    .widgets {
+        margin-top: 5rem;
+    }
+
+    .paymentText {
+        margin: 1rem 0;
+        font-size: 1rem;
+    }
+}
