@@ -5,8 +5,6 @@ import noContainer from '../utils/noContainer';
 import styles from '../styles/reviews.module.css';
 
 const Reviews = ({ reviews }) => {
-    console.log(reviews);
-
     return (
         <article>
             <section>
