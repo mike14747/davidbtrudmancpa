@@ -26,6 +26,7 @@ a {
     transition: 0.3s;
     position: relative;
     display: inline-block;
+    line-height: 1.25;
 }
 
 a:hover {
@@ -51,48 +52,6 @@ a:hover::after {
     background-color: coral;
     transition: width 0.3s, left 0.3s, background-color 1s;
 }
-
-/* a {
-    color: #008000;
-    text-decoration: none;
-}
-
-a:hover {
-    color: coral;
-    text-decoration: none;
-}
-
-.link {
-    position: relative;
-    padding-top: 0.25rem;
-    display: inline-block;
-    transition: 0.3s;
-    color: #008000 !important;
-}
-
-.link::after {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-    height: 1px;
-    content: "";
-    background-color: transparent;
-    transition: width 0.3s, left 0.3s, background-color 1s;
-}
-
-.link:hover {
-    color: coral !important;
-    transition: 0.3s;
-    text-decoration: none;
-}
-
-.link:hover::after {
-    width: 100%;
-    left: 0;
-    background-color: coral;
-    transition: width 0.3s, left 0.3s, background-color 1s;
-} */
 
 h2 {
     border-bottom: 1px rgba(0, 0, 0, 0.75) solid;

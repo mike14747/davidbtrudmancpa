@@ -6,6 +6,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 import HeaderContext from '../context/headerContext';
+import { baseQueryUrl } from '../utils/settings';
 
 import '../styles/my_reset.css';
 import '../styles/app_style.css';
@@ -47,8 +48,6 @@ MyApp.propTypes = {
 };
 
 MyApp.getInitialProps = async () => {
-    const baseQueryUrl = process.env.BASE_QUERY_URL;
-
     const query = encodeURIComponent('*[_type == "header"][0]{logoText, motto, "imageUrl": profileImage.asset->url}');
     const url = `${baseQueryUrl}${query}`;
     const headerContentJSON = await fetch(url).then(res => res.json().catch(error => console.log(error)));

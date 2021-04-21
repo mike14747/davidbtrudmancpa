@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import BlockContent from '@sanity/block-content-to-react';
 import noContainer from '../utils/noContainer';
+import { baseQueryUrl } from '../utils/settings';
 
 import styles from '../styles/reviews.module.css';
 
@@ -38,8 +39,6 @@ Reviews.propTypes = {
 };
 
 export async function getStaticProps(context) {
-    const baseQueryUrl = process.env.BASE_QUERY_URL;
-
     const query = encodeURIComponent('*[_type == "review"]{reviewer, date, review}');
     const url = `${baseQueryUrl}${query}`;
     const reviewsJSON = await fetch(url).then(res => res.json().catch(error => console.log(error)));

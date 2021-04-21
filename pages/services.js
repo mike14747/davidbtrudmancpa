@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import BlockContent from '@sanity/block-content-to-react';
 import noContainer from '../utils/noContainer';
+import { baseQueryUrl } from '../utils/settings';
 
 const Services = ({ blockContent }) => {
     return (
@@ -27,8 +28,6 @@ Services.propTypes = {
 };
 
 export async function getStaticProps(context) {
-    const baseQueryUrl = process.env.BASE_QUERY_URL;
-
     const query = encodeURIComponent('*[_type == "webpageText" && name == "Services"][0]{pageText}');
     const url = `${baseQueryUrl}${query}`;
     const blockContentJSON = await fetch(url).then(res => res.json().catch(error => console.log(error)));

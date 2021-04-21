@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import BlockContent from '@sanity/block-content-to-react';
 import noContainer from '../utils/noContainer';
+import { baseQueryUrl } from '../utils/settings';
 
 import styles from '../styles/home.module.css';
 
@@ -51,8 +52,6 @@ Home.propTypes = {
 };
 
 export async function getStaticProps(context) {
-    const baseQueryUrl = process.env.BASE_QUERY_URL;
-
     const query = encodeURIComponent('*[_type == "webpageText" && name == "Homepage"][0]{pageText}');
     const url = `${baseQueryUrl}${query}`;
     const blockContentJSON = await fetch(url).then(res => res.json().catch(error => console.log(error)));

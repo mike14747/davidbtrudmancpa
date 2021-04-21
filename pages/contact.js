@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import BlockContent from '@sanity/block-content-to-react';
 import noContainer from '../utils/noContainer';
+import { baseQueryUrl } from '../utils/settings';
 
 const Contact = ({ blockContent }) => {
     return (
@@ -27,8 +28,6 @@ Contact.propTypes = {
 };
 
 export async function getStaticProps(context) {
-    const baseQueryUrl = 'https://7xgplcbh.api.sanity.io/v1/data/query/production?query=';
-
     const query = encodeURIComponent('*[_type == "webpageText" && name == "Contact"][0]{pageText}');
     const url = `${baseQueryUrl}${query}`;
     const blockContentJSON = await fetch(url).then(res => res.json().catch(error => console.log(error)));
