@@ -38,7 +38,7 @@ Reviews.propTypes = {
 };
 
 export async function getStaticProps(context) {
-    const baseQueryUrl = 'https://7xgplcbh.api.sanity.io/v1/data/query/production?query=';
+    const baseQueryUrl = process.env.BASE_QUERY_URL;
 
     const query = encodeURIComponent('*[_type == "review"]{reviewer, date, review}');
     const url = `${baseQueryUrl}${query}`;
