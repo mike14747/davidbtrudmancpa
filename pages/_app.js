@@ -6,7 +6,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 import HeaderContext from '../context/headerContext';
-import { baseQueryUrl } from '../utils/settings';
+import { baseQueryUrl } from '../lib/settings';
 
 import '../styles/my_reset.css';
 import '../styles/app_style.css';

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import BlockContent from '@sanity/block-content-to-react';
-import noContainer from '../utils/noContainer';
-import { baseQueryUrl } from '../utils/settings';
+import noContainer from '../lib/noContainer';
+import { baseQueryUrl } from '../lib/settings';
 
 const Contact = ({ blockContent }) => {
     return (
