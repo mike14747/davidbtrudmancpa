@@ -30,7 +30,7 @@ const Contact = ({ blockContent, contactInfo }) => {
                         </h5>
                         {contactInfo.email &&
                             <div className={styles.contactItem}>
-                                Email: <a href="mailto:{contactInfo.email}">{contactInfo.email}</a>
+                                Email: <a href={'mailto:' + contactInfo.email}>{contactInfo.email}</a>
                             </div>
                         }
                         {contactInfo.phone &&
