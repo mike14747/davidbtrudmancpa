@@ -52,13 +52,13 @@ Home.propTypes = {
 };
 
 export async function getStaticProps(context) {
-    const query = encodeURIComponent('*[_type == "webpageText" && name == "Homepage"][0]{pageText}');
-    const url = `${baseQueryUrl}${query}`;
-    const blockContentJSON = await fetch(url).then(res => res.json().catch(error => console.log(error)));
+    const query1 = encodeURIComponent('*[_type == "webpageText" && name == "Homepage"][0]{pageText}');
+    const url1 = `${baseQueryUrl}${query1}`;
+    const blockContentJSON = await fetch(url1).then(res => res.json().catch(error => console.log(error)));
 
     return {
         props: {
-            blockContent: (blockContentJSON && blockContentJSON.result) || [],
+            blockContent: (blockContentJSON && blockContentJSON.result) || {},
         },
         revalidate: 600, // page regeneration can occur in 10 minutes
     };

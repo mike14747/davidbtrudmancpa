@@ -67,7 +67,7 @@
     transition: width 0.3s, left 0.3s, background-color 1s;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 480px) {
     .nav {
         justify-content: flex-start;
     }

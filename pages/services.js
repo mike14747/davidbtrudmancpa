@@ -34,7 +34,7 @@ export async function getStaticProps(context) {
 
     return {
         props: {
-            blockContent: (blockContentJSON && blockContentJSON.result) || [],
+            blockContent: (blockContentJSON && blockContentJSON.result) || {},
         },
         revalidate: 600, // page regeneration can occur in 10 minutes
     };

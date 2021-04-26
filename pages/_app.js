@@ -8,8 +8,7 @@ import Footer from '../components/footer';
 import HeaderContext from '../context/headerContext';
 import { baseQueryUrl } from '../lib/settings';
 
-import '../styles/my_reset.css';
-import '../styles/app_style.css';
+import '../styles/my_base_modified.css';
 
 function MyApp({ Component, pageProps, headerData }) {
     return (
@@ -53,7 +52,7 @@ MyApp.getInitialProps = async () => {
     const headerContentJSON = await fetch(url).then(res => res.json().catch(error => console.log(error)));
 
     return {
-        headerData: (headerContentJSON && headerContentJSON.result) || [],
+        headerData: (headerContentJSON && headerContentJSON.result) || {},
     };
 };
 
