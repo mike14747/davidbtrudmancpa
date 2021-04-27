@@ -7,7 +7,7 @@ const Services = ({ blockContent }) => {
     return (
         <article>
             <section>
-                <h2>Services</h2>
+                <h2 className="page-heading">Services</h2>
             </section>
 
             <section className="main-text">

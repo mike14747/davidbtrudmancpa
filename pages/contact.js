@@ -9,7 +9,7 @@ const Contact = ({ blockContent, contactInfo }) => {
     return (
         <article>
             <section>
-                <h2>Contact</h2>
+                <h2 className="page-heading">Contact</h2>
             </section>
 
             <section className="main-text">

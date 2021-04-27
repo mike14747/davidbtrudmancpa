@@ -9,7 +9,7 @@ const Reviews = ({ reviews }) => {
     return (
         <article>
             <section>
-                <h2>Reviews</h2>
+                <h2 className="page-heading">Reviews</h2>
             </section>
 
             <section>

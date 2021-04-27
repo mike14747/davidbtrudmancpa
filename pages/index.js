@@ -10,7 +10,7 @@ const Home = ({ blockContent }) => {
         <>
             <article>
                 <section>
-                    <h2>Overview</h2>
+                    <h2 className="page-heading">Overview</h2>
                 </section>
 
                 <section className="main-text">
