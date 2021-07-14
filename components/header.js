@@ -23,9 +23,9 @@ const Header = () => {
                 </h6>
             </div>
             {headerData && headerData.imageUrl &&
-                <div className={styles.headerRight}>
-                    <img src={headerData.imageUrl + '?w=400&h=400&fit=min'} alt="David B Trudman" title="David B Trudman" className={styles.profileImage} />
-                </div>
+                <figure aria-label="David B Trudman" className={styles.headerRight}>
+                    <img src={headerData.imageUrl + '?w=400&h=400&fit=min'} role="presentation" alt="David B Trudman" className={styles.profileImage} />
+                </figure>
             }
         </header>
     );

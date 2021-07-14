@@ -16,6 +16,7 @@
 }
 
 .navItem {
+    display: block;
     margin: 0 0.5rem;
     padding: 0.25rem;
     white-space: nowrap;
@@ -36,6 +37,7 @@
 }
 
 .navItem:hover {
+    text-decoration: none;
     color: coral;
     background-color: #ffffff;
     cursor: pointer;
@@ -53,7 +55,7 @@
     padding: 0.25rem;
     white-space: nowrap;
     position: relative;
-    color: #aaaaaa;
+    color: rgba(0, 0, 0, 0.60);
 }
 
 .navItemCurrent::after {
@@ -63,7 +65,7 @@
     width: 100%;
     height: 3px;
     content: '';
-    background-color: #cccccc;
+    background-color: rgba(0, 0, 0, 0.40);
     transition: width 0.3s, left 0.3s, background-color 1s;
 }
 

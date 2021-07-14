@@ -27,11 +27,11 @@ const Home = ({ blockContent }) => {
             <section className={styles.widgets}>
                 <aside className={styles.thumbtack}>
                     <a className={styles.thumbtackLink} ng-href="https://www.thumbtack.com/-Skokie-IL/service/2576853" target="_blank" href="https://www.thumbtack.com/-Skokie-IL/service/2576853" rel="noreferrer">
-                        <img ng-src="https://static.thumbtackstatic.com/media/pages/profile/standard-widgets/pro-svg/white/2016.svg" src="https://static.thumbtackstatic.com/media/pages/profile/standard-widgets/pro-svg/white/2016.svg" className={styles.thumbtackImage} />
+                        <img alt="Thumbtack" ng-src="https://static.thumbtackstatic.com/media/pages/profile/standard-widgets/pro-svg/white/2016.svg" src="https://static.thumbtackstatic.com/media/pages/profile/standard-widgets/pro-svg/white/2016.svg" className={styles.thumbtackImage} />
                     </a>
                 </aside>
                 <aside className={styles.paypal}>
-                    <img src="/images/paypal.png" alt="PayPal" className={styles.paypalLogo} />
+                    <img src="/images/paypal.png" alt="PayPal" role="presentation" className={styles.paypalLogo} />
                     <div className={styles.paymentText}>
                         Make a payment via PayPal:
                     </div>
@@ -39,7 +39,7 @@ const Home = ({ blockContent }) => {
                         <input type="hidden" name="cmd" value="_s-xclick" />
                         <input type="hidden" name="hosted_button_id" value="PUDKSC6R8FCDL" />
                         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" className={styles.buyNow} />
-                        <img alt="Paypal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                        <img aria-hidden="true" alt="Paypal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
                     </form>
                 </aside>
             </section>
