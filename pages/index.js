@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import BlockContent from '@sanity/block-content-to-react';
 import noContainer from '../lib/noContainer';
 import { baseQueryUrl } from '../lib/settings';
@@ -31,7 +32,11 @@ const Home = ({ blockContent }) => {
                     </a>
                 </aside>
                 <aside className={styles.paypal}>
-                    <img src="/images/paypal.png" alt="PayPal" role="presentation" className={styles.paypalLogo} />
+                    <figure aria-label="Paypal">
+                        <img src="/images/paypal.png" alt="PayPal" role="presentation" className={styles.paypalLogo} />
+                        {/* <Image src="/images/paypal.png" alt="PayPal" role="presentation" layout="fill" /> */}
+                    </figure>
+                    
                     <div className={styles.paymentText}>
                         Make a payment via PayPal:
                     </div>
