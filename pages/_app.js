@@ -8,7 +8,7 @@ import Footer from '../components/footer';
 import HeaderContext from '../context/headerContext';
 import { baseQueryUrl } from '../lib/settings';
 
-import '../styles/my_base_modified.css';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps, headerData }) {
     return (
