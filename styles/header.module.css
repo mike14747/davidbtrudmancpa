@@ -37,7 +37,8 @@
     color: rgba(255, 232, 80, 1);
     padding: 0;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.55vw + 0.5rem, 1.1rem);
     line-height: 1;
 }
 
@@ -49,15 +50,6 @@
     top: 0;
     right: 0;
     transition: 0.3s;
-}
-
-.profileImage:hover {
-    width: auto;
-    max-width: 240px;
-    height: 240px;
-    transition: 0.3s;
-    z-index: 2;
-    box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .profileImageFig {
@@ -73,55 +65,24 @@
 .profileImageFig:hover {
     width: 240px;
     height: 240px;
+    width: clamp(240px, 10vw + 200px, 400px);
+    height: clamp(240px, 10vw + 200px, 400px);
     z-index: 2;
     box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.5);
     transition: 0.3s;
 }
 
 @media (min-width: 480px) {
-    .motto {
-        font-size: 0.8rem;
-    }
-
-    .profileImage {
-        width: auto;
-        max-width: 120px;
-        height: 120px;
-    }
-
     .headerRight {
         flex: 0 0 120px;
+        flex: 0 0 clamp(120px, 5vw + 100px, 150px);
         height: 120px;
+        height: clamp(120px, 5vw + 100px, 150px);
     }
 }
 
 @media (min-width: 768px) {
     .motto {
-        font-size: 1rem;
         letter-spacing: 1px;
-    }
-
-    .profileImage {
-        width: auto;
-        max-width: 150px;
-        height: 150px;
-    }
-
-    .profileImage:hover {
-        width: auto;
-        max-width: 400px;
-        height: 400px;
-    }
-
-    .profileImageFig:hover {
-        width: 400px;
-        height: 400px;
-        box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.5);
-        transition: 0.3s;
-    }
-
-    .headerRight {
-        flex: 0 0 150px;
-        height: 150px;
     }
 }

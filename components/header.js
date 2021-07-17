@@ -26,18 +26,10 @@ const Header = () => {
             {headerData && headerData.imageUrl &&
                 <div className={styles.headerRight}>
                     <figure aria-label="David B Trudman" className={styles.profileImageFig}>
-                        {/* <img src={headerData.imageUrl + '?w=400&h=400&fit=min'} role="presentation" alt="David B Trudman" className={styles.profileImage} /> */}
                         <Image src={headerData.imageUrl + '?w=400&h=400&fit=min'} role="presentation" alt="David B Trudman" layout="fill" />
                     </figure>
                 </div>
             }
-            <style jsx global>{`
-                {
-                    .profileImage {
-                        box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.5) !important;
-                    }
-                }
-            `}</style>
         </header>
     );
 };
