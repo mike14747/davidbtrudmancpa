@@ -52,7 +52,7 @@ MyApp.getInitialProps = async () => {
     const headerContentJSON = await fetch(url).then(res => res.json().catch(error => console.log(error)));
 
     return {
-        headerData: (headerContentJSON && headerContentJSON.result) || {},
+        headerData: (headerContentJSON?.result) || {},
     };
 };
 
