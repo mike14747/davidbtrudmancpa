@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 
-import Header from '../components/header';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import Header from '../components/Zeader';
+import Navbar from '../components/Zavbar';
+import Footer from '../components/Zooter';
 
 import HeaderContext from '../context/headerContext';
 import { baseQueryUrl } from '../lib/settings';

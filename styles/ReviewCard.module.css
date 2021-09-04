@@ -1,0 +1,33 @@
+.review {
+    display: inline-block;
+    min-width: 50%;
+    background-color: #ffffff;
+    margin: 0 2rem 3rem 2rem;
+    padding: 1rem 1rem 1rem 2rem;
+    border: 1px rgba(0, 128, 0, 1) solid;
+    border-left: 10px rgba(0, 128, 0, 0.75) solid;
+}
+
+.review:last-child {
+    margin-bottom: 1rem;
+}
+
+.reviewer {
+    font-size: clamp(1.1rem, 0.7vw + 0.7rem, 1.5rem);
+    margin-bottom: 1rem;
+}
+
+.reviewDate {
+    font-style: italic;
+    font-size: clamp(0.9rem, 0.55vw + 0.6rem, 1rem);
+    margin-left: 0.5rem;
+}
+
+.reviewText > p {
+    font-size: clamp(1rem, 0.55vw + 0.55rem, 1.2rem);
+    max-width: 80ch;
+}
+
+.reviewText > p:last-child {
+    margin-bottom: 0;
+}

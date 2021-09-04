@@ -1,0 +1,15 @@
+.servicesContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.servicesContainer p {
+    max-width: 80ch;
+    font-size: clamp(1rem, 0.55vw + 0.55rem, 1.20rem);
+    margin-bottom: 2rem;
+}
+
+.servicesContainer p:last-child {
+    margin-bottom: 1rem;
+}

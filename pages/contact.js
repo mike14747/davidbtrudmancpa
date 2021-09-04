@@ -8,11 +8,9 @@ import styles from '../styles/contact.module.css';
 const Contact = ({ blockContent, contactInfo }) => {
     return (
         <article>
-            <section>
-                <h2 className="page-heading">Contact</h2>
-            </section>
+            <h2 className="page-heading">Contact</h2>
 
-            <section className="main-text">
+            <div className={styles.contactContainer}>
                 {blockContent && blockContent.pageText
                     ? <BlockContent
                         blocks={blockContent.pageText}
@@ -20,28 +18,26 @@ const Contact = ({ blockContent, contactInfo }) => {
                     />
                     : <>An error occurred fetching the summary data.</>
                 }
-            </section>
+            </div>
 
-            <section>
-                {contactInfo && (contactInfo.email || contactInfo.phone)
-                    ? <>
-                        <h5 className={styles.contact}>
-                            Contact me:
-                        </h5>
-                        {contactInfo.email &&
-                            <div className={styles.contactItem}>
-                                Email: <a href={'mailto:' + contactInfo.email}>{contactInfo.email}</a>
-                            </div>
-                        }
-                        {contactInfo.phone &&
-                            <div className={styles.contactItem}>
-                                Phone: {contactInfo.phone}
-                            </div>
-                        }
-                    </>
-                    : <>An error occurred fetching the contact info.</>
-                }
-            </section>
+            {contactInfo && (contactInfo.email || contactInfo.phone)
+                ? <address className={styles.contactContainer}>
+                    <h5 className={styles.contactHeading}>
+                        Contact me:
+                    </h5>
+                    {contactInfo.email &&
+                        <p className={styles.contactItem}>
+                            Email: <a href={'mailto:' + contactInfo.email}>{contactInfo.email}</a>
+                        </p>
+                    }
+                    {contactInfo.phone &&
+                        <p className={styles.contactItem}>
+                            Phone: {contactInfo.phone}
+                        </p>
+                    }
+                </address>
+                : <p>An error occurred fetching the contact info.</p>
+            }
         </article>
     );
 };

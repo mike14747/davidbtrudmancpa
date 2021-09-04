@@ -3,14 +3,14 @@ import BlockContent from '@sanity/block-content-to-react';
 import noContainer from '../lib/noContainer';
 import { baseQueryUrl } from '../lib/settings';
 
+import styles from '../styles/services.module.css';
+
 const Services = ({ blockContent }) => {
     return (
         <article>
-            <section>
-                <h2 className="page-heading">Services</h2>
-            </section>
+            <h2 className="page-heading">Services</h2>
 
-            <section className="main-text">
+            <section className={styles.servicesContainer}>
                 {blockContent && blockContent.pageText
                     ? <BlockContent
                         blocks={blockContent.pageText}

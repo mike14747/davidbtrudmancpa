@@ -1,4 +1,15 @@
-.contact {
+.contactContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contactContainer p {
+    max-width: 80ch;
+    font-size: clamp(1rem, 0.55vw + 0.55rem, 1.20rem);
+}
+
+.contactHeading {
     margin-top: 3rem;
     font-weight: bolder;
 }

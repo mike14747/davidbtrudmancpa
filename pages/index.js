@@ -10,11 +10,9 @@ const Home = ({ blockContent }) => {
     return (
         <>
             <article>
-                <section>
-                    <h2 className="page-heading">Overview</h2>
-                </section>
+                <h2 className="page-heading">Overview</h2>
 
-                <section className="main-text">
+                <div className={styles.overviewContainer}>
                     {blockContent && blockContent.pageText
                         ? <BlockContent
                             blocks={blockContent.pageText}
@@ -22,21 +20,23 @@ const Home = ({ blockContent }) => {
                         />
                         : <>An error occurred fetching the summary data.</>
                     }
-                </section>
+                </div>
             </article>
 
             <section className={styles.widgets}>
                 <aside className={styles.thumbtack}>
                     <a className={styles.thumbtackLink} ng-href="https://www.thumbtack.com/-Skokie-IL/service/2576853" target="_blank" href="https://www.thumbtack.com/-Skokie-IL/service/2576853" rel="noreferrer">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img alt="Thumbtack" ng-src="https://static.thumbtackstatic.com/media/pages/profile/standard-widgets/pro-svg/white/2016.svg" src="https://static.thumbtackstatic.com/media/pages/profile/standard-widgets/pro-svg/white/2016.svg" className={styles.thumbtackImage} />
                     </a>
                 </aside>
                 <aside className={styles.paypal}>
                     <figure aria-label="Paypal">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/images/paypal.png" alt="PayPal" role="presentation" className={styles.paypalLogo} />
                         {/* <Image src="/images/paypal.png" alt="PayPal" role="presentation" layout="fill" /> */}
                     </figure>
-                    
+
                     <div className={styles.paymentText}>
                         Make a payment via PayPal:
                     </div>
@@ -44,6 +44,7 @@ const Home = ({ blockContent }) => {
                         <input type="hidden" name="cmd" value="_s-xclick" />
                         <input type="hidden" name="hosted_button_id" value="PUDKSC6R8FCDL" />
                         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" className={styles.buyNow} />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img aria-hidden="true" alt="Paypal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
                     </form>
                 </aside>

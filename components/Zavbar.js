@@ -7,8 +7,8 @@ const Navbar = () => {
     const router = useRouter();
 
     return (
-        <nav className={'container ' + styles.navbar}>
-            <div className={styles.nav}>
+        <nav className={'container ' + styles.nav}>
+            <div className={styles.navbar}>
                 <div className={styles.navLeft}>
                     {router.pathname === '/'
                         ? <div className={styles.navItemCurrent}>Home</div>
