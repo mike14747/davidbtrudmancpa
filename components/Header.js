@@ -16,12 +16,12 @@ const Header = () => {
                         : <>David B Trudman CPA</>
                     }
                 </h1>
-                <h6 className={styles.motto}>
+                <h4 className={styles.motto}>
                     {headerData?.motto
                         ? <>{headerData.motto}</>
                         : <>I help you make good choices along your journey</>
                     }
-                </h6>
+                </h4>
             </div>
             {headerData?.imageUrl &&
                 <div className={styles.headerRight}>

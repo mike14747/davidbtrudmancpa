@@ -4,7 +4,7 @@
     background-color: rgba(0, 128, 0, 1);
     background-image: linear-gradient(rgba(0, 128, 0, 0.5), rgba(0, 128, 0, 0.5)), url('/images/header_bg.jpg');
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
@@ -13,10 +13,8 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
-    white-space: nowrap;
-    overflow: visible;
-    position: relative;
     padding: 0.25rem;
+    margin: auto 0;
     z-index: 1;
 }
 
@@ -27,19 +25,22 @@
     margin: 0;
 }
 
-.logoText {
+h1.logoText {
+    font-size: clamp(1.4rem, 1vw + 0.9rem, 2.1rem);
     color: rgb(255, 235, 120, 1);
     text-align: center;
     line-height: 1;
+    white-space: nowrap;
+    overflow: visible;
 }
 
 .motto {
-    color: rgba(255, 232, 80, 1);
+    color: #ffffff;
     padding: 0;
     text-align: center;
     font-size: 0.75rem;
-    font-size: clamp(0.75rem, 0.55vw + 0.5rem, 1.1rem);
-    line-height: 1;
+    font-size: clamp(0.8rem, 0.55vw + 0.5rem, 1rem);
+    line-height: 1.25;
 }
 
 .profileImage {
